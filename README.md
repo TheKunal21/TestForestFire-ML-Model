@@ -1,40 +1,27 @@
-# Forest Fire Prediction (FWI) 🌲🔥
-# This is a Machine Learning web application built using Flask and deployed to predict the Fire Weather Index (FWI). The model is trained on meteorological data to help identify the risk of forest fires based on # environmental factors.
+🌲 Forest Fire Predictor
+A simple Machine Learning web app that predicts the Fire Weather Index (FWI) based on weather conditions like temperature, humidity, and wind speed.
 
-🛠️ Tech Stack
-Language: Python
+🎯 What it does
+This tool helps identify the risk of forest fires. You enter current weather data, and the AI model tells you the predicted Fire Weather Index, helping authorities take precautions early.
 
-Machine Learning: Scikit-Learn, Pandas, NumPy
+🛠️ Built With
+Python (Core logic)
 
-Web Framework: Flask
+Flask (Web Framework)
 
-Frontend: HTML5, CSS3 (Bootstrap)
+Scikit-Learn (Machine Learning Model)
 
-Environment: Jupyter Notebook / VS Code
+HTML/CSS (User Interface)
 
-📊 Dataset Information
-The dataset used for this project contains environmental variables such as:
+📂 How to Run
+Clone the project: git clone https://github.com/YourUsername/testforestfire.git
 
-Temperature: Max temperature in Celsius degrees.
+Install requirements: pip install -r requirements.txt
 
-RH: Relative Humidity in %.
+Start the app: python application.py
 
-Ws: Wind speed in km/h.
+Open in browser: Go to http://127.0.0.1:5000
 
-Rain: Total day in mm.
-
-FFMC: Fine Fuel Moisture Code.
-
-DMC: Duff Moisture Code.
-
-DC: Drought Code.
-
-ISI: Initial Spread Index.
-
-BUI: Build Up Index.
-
-FWI: Fire Weather Index (Target Variable).
-
-------------------------------------------
+--------------------------------------------
 
 Created By Kunal Saini
