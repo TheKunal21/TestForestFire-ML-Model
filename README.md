@@ -1,5 +1,5 @@
-Forest Fire Prediction (FWI) 🌲🔥
-This is a Machine Learning web application built using Flask and deployed to predict the Fire Weather Index (FWI). The model is trained on meteorological data to help identify the risk of forest fires based on environmental factors.
+# Forest Fire Prediction (FWI) 🌲🔥
+# This is a Machine Learning web application built using Flask and deployed to predict the Fire Weather Index (FWI). The model is trained on meteorological data to help identify the risk of forest fires based on # environmental factors.
 
 🛠️ Tech Stack
 Language: Python
