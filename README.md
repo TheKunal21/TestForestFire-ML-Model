@@ -24,4 +24,6 @@ Open in browser: Go to http://127.0.0.1:5000
 
 --------------------------------------------
 
+Happy Learning !
+
 Created By Kunal Saini
