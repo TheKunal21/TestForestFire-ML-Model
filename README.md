@@ -5,7 +5,7 @@ A simple Machine Learning web app that predicts the Fire Weather Index (FWI) bas
 This tool helps identify the risk of forest fires. You enter current weather data, and the AI model tells you the predicted Fire Weather Index, helping authorities take precautions early.
 
 🛠️ Built With
-Python (Core logic)
+Python ((Core logic))
 
 Flask (Web Framework)
 
