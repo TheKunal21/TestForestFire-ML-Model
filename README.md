@@ -31,10 +31,10 @@ DC: Drought Code.
 
 ISI: Initial Spread Index.
 
-----------------------------
-
-Creadted By Kunal Saini
-
 BUI: Build Up Index.
 
 FWI: Fire Weather Index (Target Variable).
+
+------------------------------------------
+
+Creadted By Kunal Saini
