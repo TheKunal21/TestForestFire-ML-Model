@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Reset and Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            /* A nature-themed background since this is for Fire Weather */
+            background-image: url('https://images.unsplash.com/photo-1448375240586-dfd8d395ea6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 2. The Glassmorphism Card */
+        .login {
+            background: rgba(255, 255, 255, 0.15); /* Translucent white */
+            backdrop-filter: blur(12px);            /* The "Frosted" effect */
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* 3. Input Fields Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Space between inputs */
+        }
+
+        /* Using Grid to put two inputs side-by-side for a compact look */
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            background: #fff;
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        /* 4. Button Styling */
+        .btn {
+            margin-top: 20px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fire colors */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* 5. Result Text */
+        h2 {
+            margin-top: 25px;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            min-width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login">
+        <h1>FWI Prediction</h1>
+
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+            
+            <div class="input-group">
+                <input type="text" name="Temperature" placeholder="Temperature (°C)" required />
+                <input type="text" name="RH" placeholder="RH (%)" required />
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="Ws" placeholder="Wind Speed (Ws)" required />
+                <input type="text" name="Rain" placeholder="Rain (mm)" required />
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="FFMC" placeholder="FFMC" required />
+                <input type="text" name="DMC" placeholder="DMC" required />
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="ISI" placeholder="ISI" required />
+                <input type="text" name="Classes" placeholder="Classes" required />
+            </div>
+
+            <input type="text" name="Region" placeholder="Region" required />
+
+            <button type="submit" class="btn">Predict Analysis</button>
+        </form>
+
+        <h2>Result: {{results}}</h2>
+    </div>
+
+</body>
+</html>
