@@ -37,4 +37,4 @@ FWI: Fire Weather Index (Target Variable).
 
 ------------------------------------------
 
-Creadted By Kunal Saini
+Created By Kunal Saini
