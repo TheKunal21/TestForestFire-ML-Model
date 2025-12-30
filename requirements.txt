@@ -4,3 +4,5 @@ render_template
 numpy
 pandas
 scikit-learn
+seaborn 
+matplotlib
